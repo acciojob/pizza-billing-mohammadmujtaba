@@ -7,10 +7,6 @@ public class Pizza {
     private String bill;
     private int frqCheezeToppingsPaper[];
 
-    public int[] getFrqCheezeToppingsPaper() {
-        return frqCheezeToppingsPaper;
-    }
-
 
     public Pizza(Boolean isVeg){
         this.isVeg = isVeg;
