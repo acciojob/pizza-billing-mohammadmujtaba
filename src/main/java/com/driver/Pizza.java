@@ -17,7 +17,7 @@ public class Pizza {
             this.price = 400;
 
         bill = "";
-        frqCheezeToppingsPaper = new int[3];
+        frqCheezeToppingsPaper = new int[4];
     }
 
     public int getPrice(){
@@ -41,30 +41,33 @@ public class Pizza {
 
     public String getBill(){
         // your code goes here
+        if(frqCheezeToppingsPaper[3] == 0) {
+            frqCheezeToppingsPaper[3]++;
 
-        bill += "Base Price Of The Pizza: " + price +"\n";
+            bill += "Base Price Of The Pizza: " + price + "\n";
 
-        if(frqCheezeToppingsPaper[0]!=0) {
-            bill += "Extra Cheese Added: " + 80 +"\n";
-            price += 80;
-        }
-        if(frqCheezeToppingsPaper[1]!=0) {
-            if(isVeg) {
-                bill += "Extra Toppings Added: " + 70 +"\n";
-                price += 70;
+            if (frqCheezeToppingsPaper[0] != 0) {
+                bill += "Extra Cheese Added: " + 80 + "\n";
+                price += 80;
             }
-            else{
-                bill += "Extra Toppings Added: " + 120 +"\n";
-                price += 120;
+            if (frqCheezeToppingsPaper[1] != 0) {
+                if (isVeg) {
+                    bill += "Extra Toppings Added: " + 70 + "\n";
+                    price += 70;
+                } else {
+                    bill += "Extra Toppings Added: " + 120 + "\n";
+                    price += 120;
+                }
             }
-        }
-        if(frqCheezeToppingsPaper[2]!=0) {
-            bill += "Paperbag Added: " + 20 * frqCheezeToppingsPaper[2] +"\n";
-            price += 20 * frqCheezeToppingsPaper[2];
-        }
+            if (frqCheezeToppingsPaper[2] != 0) {
+                bill += "Paperbag Added: " + 20 * frqCheezeToppingsPaper[2] + "\n";
+                price += 20 * frqCheezeToppingsPaper[2];
+            }
 
-        bill += "Total Price: " + price +"\n";
+            bill += "Total Price: " + price + "\n";
 
-        return this.bill;
+            return this.bill;
+        }
+        return "";
     }
 }
