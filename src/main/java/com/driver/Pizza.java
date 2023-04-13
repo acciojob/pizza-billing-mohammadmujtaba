@@ -26,7 +26,6 @@ public class Pizza {
 
     public void addExtraCheese(){
         // your code goes here
-
         frqCheezeToppingsPaper[0]++;
     }
 
