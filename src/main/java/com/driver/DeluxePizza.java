@@ -7,6 +7,7 @@ public class DeluxePizza extends Pizza {
         // your code goes here
 
         int frq[] = getFrqCheezeToppingsPaper();
+
         frq[0]++;
         frq[1]++;
     }
