@@ -60,8 +60,8 @@ public class Pizza {
                 }
             }
             if (frqCheezeToppingsPaper[2] != 0) {
-                bill += "Paperbag Added: " + 20 * frqCheezeToppingsPaper[2] + "\n";
-                price += 20 * frqCheezeToppingsPaper[2];
+                bill += "Paperbag Added: " + 20 + "\n";
+                price += 20;
             }
 
             bill += "Total Price: " + price + "\n";
