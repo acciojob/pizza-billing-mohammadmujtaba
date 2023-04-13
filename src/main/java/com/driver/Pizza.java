@@ -5,7 +5,7 @@ public class Pizza {
     private int price;
     private Boolean isVeg;
     private String bill;
-    private int frqCheezeToppingsPaper[];
+    private int frqCTPB[];
 
 
     public Pizza(Boolean isVeg){
@@ -17,7 +17,7 @@ public class Pizza {
             this.price = 400;
 
         bill = "";
-        frqCheezeToppingsPaper = new int[4];
+        frqCTPB = new int[4];
     }
 
     public int getPrice(){
@@ -26,41 +26,41 @@ public class Pizza {
 
     public void addExtraCheese(){
         // your code goes here
-        frqCheezeToppingsPaper[0]++;
+        frqCTPB[0]++;
     }
 
     public void addExtraToppings(){
         // your code goes here
-        frqCheezeToppingsPaper[1]++;
+        frqCTPB[1]++;
     }
 
     public void addTakeaway(){
         // your code goes here
-        frqCheezeToppingsPaper[2]++;
+        frqCTPB[2]++;
     }
 
     public String getBill(){
         // your code goes here
-        if(frqCheezeToppingsPaper[3] == 0) {
-            frqCheezeToppingsPaper[3]++;
+        if(frqCTPB[3] == 0) {
+            frqCTPB[3]++;
 
             bill += "Base Price Of The Pizza: " + price + "\n";
 
-            if (frqCheezeToppingsPaper[0] != 0) {
-                bill += "Extra Cheese Added: " + 80 + "\n";
+            if (frqCTPB[0] != 0) {
+                bill += "Extra Cheese Added: 80\n";
                 price += 80;
             }
-            if (frqCheezeToppingsPaper[1] != 0) {
+            if (frqCTPB[1] != 0) {
                 if (isVeg) {
-                    bill += "Extra Toppings Added: " + 70 + "\n";
+                    bill += "Extra Toppings Added: 70\n";
                     price += 70;
                 } else {
-                    bill += "Extra Toppings Added: " + 120 + "\n";
+                    bill += "Extra Toppings Added: 120\n";
                     price += 120;
                 }
             }
-            if (frqCheezeToppingsPaper[2] != 0) {
-                bill += "Paperbag Added: " + 20 + "\n";
+            if (frqCTPB[2] != 0) {
+                bill += "Paperbag Added: 20\n";
                 price += 20;
             }
 
